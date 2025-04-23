@@ -1,0 +1,36 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.0.21'
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
+    // https://mvnrepository.com/artifact/io.qameta.allure/allure-junit5
+    testImplementation("io.qameta.allure:allure-junit5:2.17.3")
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    implementation("org.seleniumhq.selenium:selenium-java:4.28.1")
+    implementation("org.aspectj:aspectjweaver:1.9.7")
+}
+
+allure {
+    version = "2.17.3"
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "allure.results.directory", "build/allure-results"
+    systemProperty "allure.report.directory", "build/allure-report"
+}
+kotlin {
+    jvmToolchain(17)
+}

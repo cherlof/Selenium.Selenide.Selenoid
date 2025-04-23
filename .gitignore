@@ -1,0 +1,16 @@
+/.idea/
+*.iml
+
+#Selenium
+Selenium/.gradle
+Selenium/build
+
+#Selenide
+
+Selenide/.gradle
+Selenide/build
+
+#Selenoide
+
+Selenoid/.gradle
+Selenoid/build
