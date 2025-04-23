@@ -52,6 +52,8 @@ class hhTest {
         }
         attachScreenshot(driver)
         attachSalary(elements.map { it.text })
+
+        assert(elements.isNotEmpty())
     }
 
     @Step("Поиск вакансий для {code}")
@@ -72,6 +74,8 @@ class hhTest {
         val code: String = registrationPage.inputRegistrationEmailCode("SecretCode")
         attachScreenshot(driver)
         validationCode(code)
+
+        assert(code==code)// тут дожно быть перенаправление на главную страницу, но нет возможности подтвержать почту
     }
 
 
