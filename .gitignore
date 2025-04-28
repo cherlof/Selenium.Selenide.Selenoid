@@ -14,3 +14,13 @@ Selenide/build
 
 Selenoid/.gradle
 Selenoid/build
+
+#Selenide-Appium
+
+Selenide-Appium/.gradle
+Selenide-Appium/build
+
+#Appium
+
+Appium/.gradle
+Appium/build
